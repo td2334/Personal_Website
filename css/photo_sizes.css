@@ -1,0 +1,13 @@
+/* CSS Document */
+
+/*This controls the sites logo at the top*/
+#img_logo {
+	width: 150px;
+	height: 100px;
+	position: absolute; 
+	margin: 10px 15px 15px 10px;
+	left: 50px; 
+	top: 10px; 
+	
+}
+
