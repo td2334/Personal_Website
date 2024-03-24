@@ -1,0 +1,124 @@
+/* CSS Document */
+
+nav {
+	background-color: #FFFF; 
+	padding-top: 0%;
+}
+
+nav ul {
+	width: 100%;
+	list-style: none;
+	display: flex; 
+	justify-content: flex-end; 
+	align-items: left;
+}
+
+
+
+nav a:hover {
+	
+	background-color: aliceblue;
+}
+
+
+/* nav li:first-child {
+	margin-right: auto;
+}
+*/
+
+
+/*This controls the properties of the nav bar like text size, font color, etc. */
+nav ul li {
+	float: left;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-align: left;
+	margin-right: 40px;
+	margin-top: 40px; 
+	letter-spacing: 2px;
+	font-weight: bold;
+	transition: all 0.3s linear;
+}
+
+ul li a {
+	color: #000000;
+	text-decoration: none;
+}
+
+ul li:hover a {
+	color: #2C9AB7;
+}
+
+
+/*This controls the position of the nav bar including how far from the end of the screen it is. */
+nav {
+	float: right;
+	/*width: 601px;*/
+	text-align: right;
+	margin-right: 60px;
+}
+
+header nav ul {
+	list-style: none;
+	float: right;
+}
+
+
+
+
+
+
+
+.sidebar {
+	position: absolute;
+	top: 0; 
+	right: 0;
+	height: 100vh; 
+	width: 250px; 
+	z-index: 999; 
+	background-color: #00008B; 
+	backdrop-filer: blue(10px); 
+	display: none;
+	flex-direction: column; 
+	align-items: flex-start; 
+	justify-content: flex-start;
+		
+}
+
+.sidebar li{
+	width 100%; 
+}
+
+.sidebar a {
+	width: 100%;
+}
+
+
+.menu-button {
+	
+	display: none; 
+}
+
+
+/*The nav bar links should not be visable on devices less then 800px*/
+@media(max-width: 900px) {
+	.hideOnMobile {
+		display: none; 
+	}
+	
+	.menu-button {
+		display: block; 
+	}
+}/*Close media tag*\
+	
+	
+/*This should show the entire sidebar on mobile*/
+@media(max-width: 400px) {
+	.sidebar {
+		width: 100%;
+	}
+}
+
+
+
+
