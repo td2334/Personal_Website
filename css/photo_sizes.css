@@ -7,7 +7,18 @@
 	position: absolute; 
 	margin: 10px 15px 15px 10px;
 	left: 50px; 
-	top: 10px; 
-	
+	top: 10px; 	
+}
+
+#dewall_photo_homepage {
+
+	position: relative;
+	top: 30px;
+	left: 200px;
+	width: 30%;
+	height: 25%; 
+	background-repeat: no-repeat;
+	background-size: contain;
+
 }
 
