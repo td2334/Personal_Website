@@ -68,16 +68,8 @@
     <section>
         <div class="form_container">
             <h2>Contact Form</h2>
-            <!-- PHP block to start session and generate CSRF token -->
-            <?php
-            session_start(); // Start a new session or resume the existing session
-            if (empty($_SESSION['csrf_token'])) {
-                // Generate a new CSRF token if one doesn't already exist
-                $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-            }
-            ?>
             <!-- HTML form for user input -->
-            <form action="../php/process-form.php" method="post">
+            <form action="submit-form.php" method="post">
                 <!-- Hidden input field to include CSRF token in form submission -->
                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                 <!-- Name input field -->
