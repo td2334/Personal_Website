@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <!-- Character encoding and compatibility -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Responsive design viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO and metadata -->
+    <meta
+      name="description"
+      content="Trevor J. DeWall - Cyber Security Professional, Software Developer, and Systems Administrator. Explore my portfolio, projects, and professional experience."
+    />
+    <meta
+      name="keywords"
+      content="Trevor DeWall, Cyber Security, Software Development, Systems Administration, Network Architecture, Portfolio"
+    />
+    <meta name="author" content="Trevor J. DeWall" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- Page title -->
+    <title>Trevor J. DeWall</title>
+
+    <!-- Main stylesheet - contains all styles for the site -->
+    <link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Main Container - wraps all content for consistent styling -->
+    <div class="container">
+      <!-- Theme Toggle - Fixed position for easy access -->
+      <div class="theme-toggle">
+        <span class="theme-icon sun">☀️</span>
+        <label class="theme-switch">
+          <input
+            type="checkbox"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          />
+          <span class="theme-slider"></span>
+        </label>
+        <span class="theme-icon moon">🌙</span>
+      </div>
+
+      <!-- 
+      Navigation Header Section
+      ========================
+      The header is loaded dynamically using JavaScript from components/header.html
+      This includes the logo, main navigation menu, and mobile menu toggle
+      -->
+      <div id="header-placeholder">
+        <!-- Header component will be inserted here by addComponents.js -->
+      </div>
+
+      <!-- 
+      Hero Banner Section
+      ===================
+      Large banner section displaying Trevor's name prominently
+      Uses custom styling for visual impact and branding
+      -->
+      <section class="banner">
+        <p class="dewall_bigname">Trevor J. DeWall</p>
+      </section>
+
+      <!-- 
+      About/Profile Overview Section
+      ==============================
+      This section provides a quick overview of Trevor's skills and background
+      Features:
+      - Professional headshot photo
+      - Key skills and specializations
+      - Call-to-action button to detailed about page
+      -->
+      <section class="aboutcontainer">
+        <div class="profile">
+          <!-- Professional headshot with alt text for accessibility -->
+          <img
+            src="images/trevor_dewall.webp"
+            alt="Professional headshot of Trevor DeWall, Cyber Security Professional"
+            class="profile-photo"
+          />
+
+          <!-- Skills overview with structured list -->
+          <div class="profile-overview">
+            <h1>Overview of Skills</h1>
+            <!-- Core competencies listed in order of importance -->
+            <p>Cyber Security Professional</p>
+            <p>Penetration Testing</p>
+            <p>Systems Administration</p>
+            <p>Network Architecture (IPv4/IPv6)</p>
+            <p>Problem Solving & Analysis</p>
+
+            <!-- Call-to-action button for more detailed information -->
+            <button
+              onclick="window.location.href='/about'"
+              class="overview-button"
+              aria-label="Navigate to detailed about page"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-links">
+        <div class="container">
+          <h2>Explore My Work</h2>
+
+          <!-- Grid layout for navigation cards -->
+          <div class="links-grid">
+            <!-- Projects Card 
+            <div class="link-card">
+              <h3>Projects</h3>
+              <p>Discover my latest developments</p>
+              <a
+                href="pages/projects.html"
+                class="card-button"
+                aria-label="View Trevor's project portfolio"
+              >
+                View Projects
+              </a>
+            </div>
+            -->
+            <!-- Resume Card -->
+            <div class="link-card">
+              <h3>Resume</h3>
+              <p>Review my experience</p>
+              <a
+                href="/resume.html"
+                class="card-button"
+                aria-label="View Trevor's professional resume"
+              >
+                View Resume
+              </a>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="link-card">
+              <h3>Contact</h3>
+              <p>Get in touch</p>
+              <a
+                href="/contact.html"
+                class="card-button"
+                aria-label="Contact Trevor DeWall"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 
+    Footer Section
+    ==============
+    The footer is loaded dynamically using JavaScript from components/footer.html
+    Contains copyright information and additional links
+    -->
+    <div id="footer-placeholder">
+      <!-- Footer component will be inserted here by addComponents.js -->
+    </div>
+
+    <!-- 
+    JavaScript Dependencies
+    =======================
+    Load the component loader script that handles:
+    - Header insertion
+    - Footer insertion
+    - Dynamic copyright year updating
+    - Mobile navigation functionality
+    -->
+    <script src="./components/addComponents.js"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding and viewport for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO and metadata -->
+    <meta
+      name="description"
+      content="View and download Trevor J. DeWall's professional resume. Cyber Security Professional and Software Developer with expertise in systems administration and network architecture."
+    />
+    <meta
+      name="keywords"
+      content="Trevor DeWall Resume, Cyber Security Resume, Software Developer Resume, Professional CV, Download Resume"
+    />
+    <meta name="author" content="Trevor J. DeWall" />
+
+    <!-- Page title for browser tab and SEO -->
+    <title>Resume - Trevor J. DeWall</title>
+
+    <!-- Stylesheet and favicon -->
+    <link rel="stylesheet" href="../css/singlePageTemplate.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Dynamic header insertion point -->
+    <div id="header-placeholder">
+      <!-- Header component loaded by addComponents.js -->
+    </div>
+
+    <!-- Main content container with semantic HTML -->
+    <main class="resume-container">
+      <!-- Theme Toggle - Fixed position for easy access -->
+      <div class="theme-toggle">
+        <span class="theme-icon sun">☀️</span>
+        <label class="theme-switch">
+          <input
+            type="checkbox"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          />
+          <span class="theme-slider"></span>
+        </label>
+        <span class="theme-icon moon">🌙</span>
+      </div>
+
+      <!-- 
+      Resume Hero Section
+      ===================
+      Follows the same pattern as about-hero, contact-hero, and projects-hero
+      Introduces the resume page with clear title and description
+      -->
+      <section class="resume-hero">
+        <h1>Resume</h1>
+        <p>View and download my professional resume</p>
+      </section>
+
+      <!-- 
+      Resume Content Section
+      ======================
+      Main content area following the established pattern
+      -->
+      <div class="resume-content">
+        <div class="pdf-container">
+          <embed
+            src="../docs/resume_updating.pdf"
+            type="application/pdf"
+            class="pdf-embed"
+            aria-label="Trevor DeWall's Professional Resume PDF"
+          />
+          <!-- Fallback text for browsers that don't support PDF embedding -->
+          <p>
+            If the PDF doesn't display,
+            <a
+              href="../docs/resume_updating.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open resume PDF in new tab"
+            >
+              click here to view it
+            </a>
+          </p>
+        </div>
+
+        <!-- 
+        Download Section
+        ================
+        Provides direct download functionality for users who want to save
+        the resume file locally for offline viewing or printing
+        
+        Features:
+        - download attribute forces file download instead of opening in browser
+        - Clear visual styling to distinguish from other links
+        - Descriptive text indicating file format
+        -->
+        <div class="download-section">
+          <a
+            href="../docs/resume.pdf"
+            download
+            class="download-link"
+            aria-label="Download Trevor DeWall's resume as PDF file"
+          >
+            Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Dynamic footer insertion point -->
+    <div id="footer-placeholder">
+      <!-- Footer component loaded by addComponents.js -->
+    </div>
+
+    <!-- 
+    JavaScript Dependencies
+    =======================
+    Load component handler for header/footer insertion and functionality
+    -->
+    <script src="../components/addComponents.js"></script>
+  </body>
+</html>

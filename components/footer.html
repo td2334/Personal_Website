@@ -1,0 +1,69 @@
+<!--
+================================================================================
+SITE FOOTER COMPONENT - TREVOR J. DEWALL PERSONAL WEBSITE
+================================================================================
+File: footer.html
+Purpose: Reusable footer component for all pages
+Author: Trevor J. DeWall
+Last Updated: June 2025
+
+Description:
+This is a reusable footer component that provides consistent footer content
+across all pages of the website. It's loaded dynamically by addComponents.js
+into any page that includes a #footer-placeholder div.
+
+Key Features:
+- Copyright notice with dynamic year updating
+- Professional presentation with clean styling
+- Consistent branding across all pages
+- Semantic HTML structure for accessibility
+- Responsive design that works on all devices
+
+Dynamic Functionality:
+- The copyright year is automatically updated by JavaScript in addComponents.js
+- Uses #copyright-year span element as insertion point
+- Year updates on page load to always show current year
+
+Usage:
+- Loaded automatically by addComponents.js
+- No manual maintenance required for copyright year
+- Consistent styling applied via singlePageTemplate.css
+
+Dependencies:
+- CSS: Styled via singlePageTemplate.css (.site-footer class)
+- JavaScript: addComponents.js handles insertion and year updating
+
+Browser Compatibility:
+- Works in all modern browsers
+- Graceful degradation for older browsers
+- No JavaScript dependencies for basic functionality
+================================================================================
+-->
+
+<!-- 
+Site Footer Component
+=====================
+This footer provides consistent footer content across all pages of the website.
+Contains copyright information with automatic year updating.
+
+Features:
+- Copyright notice with Trevor's name
+- Dynamic year updating via JavaScript
+- Professional, clean presentation
+- Responsive design considerations
+-->
+<footer class="site-footer" role="contentinfo">
+  <!-- 
+  Copyright Section
+  =================
+  Contains the copyright notice with dynamic year updating
+  The year is automatically updated by JavaScript in addComponents.js
+  -->
+  <div class="copyright">
+    <p>
+      <!-- Copyright symbol and dynamic year span -->
+      &copy; <span id="copyright-year">2025</span> Trevor J. DeWall. All rights
+      reserved.
+    </p>
+  </div>
+</footer>

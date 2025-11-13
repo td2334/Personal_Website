@@ -1,0 +1,545 @@
+<!--
+================================================================================
+CONTACT PAGE - TREVOR J. DEWALL PERSONAL WEBSITE
+================================================================================
+File: contact.html
+Purpose: Contact page with multiple communication methods and interactive contact form
+Author: Trevor
+Last Updated: June 2025
+
+Description:
+This page provides multiple ways for visitors to contact Trevor J. DeWall:
+- Direct contact information (email, LinkedIn)
+- Interactive contact form with multiple submission methods
+- JavaScript-powered form handling for different email clients
+- Responsive design with accessibility considerations
+
+Key Features:
+- Multiple contact methods (Gmail, default email client, copy email)
+- Form validation with visual feedback
+- SVG icons for contact methods
+- Responsive layout that works on all devices
+- JavaScript functionality for form submission
+- Email address copying functionality
+
+Form Submission Methods:
+1. Gmail - Opens Gmail compose window with pre-filled content
+2. Default Email Client - Uses mailto: protocol for system email client
+3. Copy Email - Copies email address to clipboard
+
+Dependencies:
+- CSS: ../css/singlePageTemplate.css
+- JavaScript: ../components/addComponents.js + inline JavaScript
+- Components: header.html, footer.html
+- Images: favicon.ico
+
+JavaScript Features:
+- Form validation with visual feedback
+- Multiple email submission methods
+- Clipboard API for email copying
+- Loading states for better UX
+- Fallback for older browsers
+================================================================================
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding and viewport for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO and metadata -->
+    <meta
+      name="description"
+      content="Contact Trevor J. DeWall - Cyber Security Professional and Software Developer. Multiple ways to get in touch including email, LinkedIn, and contact form."
+    />
+    <meta
+      name="keywords"
+      content="Contact Trevor DeWall, Cyber Security Contact, Software Developer Contact, Professional Contact Information"
+    />
+    <meta name="author" content="Trevor J. DeWall" />
+
+    <!-- Page title for browser tab and SEO -->
+    <title>Contact - Trevor J. DeWall</title>
+
+    <!-- Stylesheet and favicon -->
+    <link rel="stylesheet" href="../css/singlePageTemplate.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- 
+    ============================================================================
+    CONTACT PAGE STRUCTURE
+    ============================================================================
+    This page provides comprehensive contact options for visitors to reach Trevor.
+    
+    Page Sections:
+    1. Navigation Header (dynamic)
+    2. Hero Section - Introduction and purpose
+    3. Contact Information - Direct contact details with icons
+    4. Interactive Contact Form - Multiple submission methods
+    5. Alternative Contact Methods - Additional options
+    6. Footer (dynamic)
+    
+    JavaScript Functionality:
+    - Form validation with visual feedback
+    - Multiple email submission methods (Gmail, default client, copy)
+    - Loading states and user feedback
+    - Clipboard integration for email copying
+    ============================================================================
+    -->
+
+    <!-- Dynamic header insertion point -->
+    <div id="header-placeholder">
+      <!-- Header component loaded by addComponents.js -->
+    </div>
+
+    <!-- Main content container with semantic HTML -->
+    <main class="contact-container">
+      <!-- Theme Toggle - Fixed position for easy access -->
+      <div class="theme-toggle">
+        <span class="theme-icon sun">☀️</span>
+        <label class="theme-switch">
+          <input
+            type="checkbox"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          />
+          <span class="theme-slider"></span>
+        </label>
+        <span class="theme-icon moon">🌙</span>
+      </div>
+
+      <!-- 
+      Hero Section
+      ============
+      Introductory section explaining the purpose of the contact page
+      Sets expectations for response time and communication methods
+      -->
+      <section class="contact-hero">
+        <h1>Get In Touch</h1>
+      </section>
+
+      <!-- Main contact content wrapper -->
+      <div class="contact-content">
+        <!-- 
+        Contact Information Section
+        ===========================
+        Direct contact details with visual icons and clear presentation
+        Each contact method includes an icon and relevant information
+        -->
+        <section class="contact-info">
+          <h2>Contact Information</h2>
+          <div class="contact-details">
+            <!-- Email Contact Item -->
+            <div class="contact-item">
+              <!-- Email SVG Icon -->
+              <div class="contact-item-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-item-content">
+                <h3>Email</h3>
+                <p>trevor@trevordewall.com</p>
+              </div>
+            </div>
+
+            <!-- LinkedIn Contact Item -->
+            <div class="contact-item">
+              <!-- LinkedIn SVG Icon -->
+              <div class="contact-item-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-item-content">
+                <h3>LinkedIn</h3>
+                <p>
+                  <a
+                    href="https://linkedin.com/in/trevordewall"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Trevor's LinkedIn profile"
+                  >
+                    linkedin.com/in/trevordewall
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Response Time Information -->
+            <div class="contact-item">
+              <!-- Clock/Time SVG Icon -->
+              <div class="contact-item-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10.59 13.41a1 1 0 0 1 0-1.41l2.83-2.83a1 1 0 0 1 1.41 1.41L12 13.41a1 1 0 0 1-1.41 0zM8.47 15.53a4 4 0 0 1 0-5.66l1.41-1.41a4 4 0 0 1 5.66 5.66l-1.41 1.41a4 4 0 0 1-5.66 0zm7.06-7.06a4 4 0 0 1 0 5.66l-1.41 1.41a4 4 0 0 1-5.66-5.66l1.41-1.41a4 4 0 0 1 5.66 0z"
+                  />
+                  </svg>
+                  <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                </svg>
+              </div>
+              <div class="contact-item-content">
+                <h3>Linktree</h3>
+                <p>
+                  <a
+                    href="https://linktr.ee/dewallt101"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Trevor's LinkedIn profile"
+                  >
+                    https://linktr.ee/dewallt101
+                  </a>
+                </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        Interactive Contact Form Section
+        ================================
+        Feature-rich contact form with multiple submission methods
+        Includes form validation, visual feedback, and multiple email options
+        JavaScript handles form submission and user interaction
+        -->
+        <section class="contact-form-section">
+          <h2>Send a Message</h2>
+
+          <!-- 
+          Form Instructions
+          Explains the different submission methods available to users
+          -->
+          <div
+            id="form-info"
+            class="form-info"
+            style="
+              background-color: #e3f2fd;
+              padding: 1rem;
+              border-radius: 6px;
+              margin-bottom: 1.5rem;
+              border-left: 4px solid #2196f3;
+            "
+          >
+            <p style="margin: 0 0 0.5rem 0; color: #1976d2">
+              <strong>Choose Your Email Method:</strong>
+            </p>
+            <ul style="margin: 0; color: #1976d2; padding-left: 1.2rem">
+              <li>
+                <strong>Gmail:</strong> Opens Gmail with your message (sends
+                from currently logged-in Gmail account)
+              </li>
+              <li>
+                <strong>Default Email:</strong> Opens your system's email client
+                (Outlook, Apple Mail, etc.)
+              </li>
+              <li>
+                <strong>Copy Email:</strong> Copy my email address to paste in
+                your preferred email app
+              </li>
+            </ul>
+          </div>
+
+          <!-- 
+          Contact Form
+          ============
+          Interactive form with validation and multiple submission options
+          All fields are required and include proper labeling for accessibility
+          -->
+          <form class="contact-form" id="contact-form" novalidate>
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                aria-describedby="name-error"
+              />
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                aria-describedby="email-error"
+              />
+            </div>
+
+            <!-- Subject Field -->
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                aria-describedby="subject-error"
+              />
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder=""
+                required
+                aria-describedby="message-error"
+              ></textarea>
+            </div>
+
+            <!-- 
+            Form Submission Buttons
+            =======================
+            Two primary submission methods with distinct styling
+            JavaScript handles the different submission approaches
+            -->
+            <div class="contact-form-buttons">
+              <button
+                type="button"
+                id="gmail-btn"
+                class="form-submit"
+                style="background-color: #db4437"
+                aria-label="Send message via Gmail"
+              >
+                Send via Gmail
+              </button>
+              <button
+                type="submit"
+                class="form-submit"
+                id="submit-btn"
+                aria-label="Send message via default email client"
+              >
+                Send via Default Email
+              </button>
+            </div>
+          </form>
+
+          <!-- 
+          Alternative Contact Methods
+          ===========================
+          Additional options for users who prefer different contact methods
+          Includes email copying functionality
+          -->
+          <div class="alternative-contact-section">
+            <p>
+              <strong>Prefer a different method?</strong>
+            </p>
+            <div class="alternative-contact-buttons">
+              <button
+                type="button"
+                id="copy-email-btn"
+                class="form-submit"
+                aria-label="Copy Trevor's email address to clipboard"
+              >
+                Copy Email Address
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Dynamic footer insertion point -->
+    <div id="footer-placeholder">
+      <!-- Footer component loaded by addComponents.js -->
+    </div>
+
+    <!-- Load header/footer components -->
+    <script src="../components/addComponents.js"></script>
+
+    <script>
+      //
+      // Gmail Button Event Handler
+      // ==========================
+      // Handles form submission via Gmail compose window
+      //
+      document
+        .getElementById("gmail-btn")
+        .addEventListener("click", function () {
+          const form = document.getElementById("contact-form");
+
+          // Trigger native HTML5 validation before proceeding
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          // Get form field values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          // Show loading state to user
+          this.disabled = true;
+          this.textContent = "Opening Gmail...";
+
+          // Create Gmail compose URL with pre-filled content
+          const gmailSubject = encodeURIComponent(subject);
+          const gmailBody = encodeURIComponent(
+            `Hi Trevor,\n\n` +
+              `${message}\n\n` +
+              `Feel free to reply to this email or contact me at ${email}.\n\n` +
+              `Best regards,\n${name}`,
+          );
+
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=trevor@trevordewall.com&su=${gmailSubject}&body=${gmailBody}`;
+
+          // Open Gmail in new tab
+          window.open(gmailUrl, "_blank");
+
+          // Reset button state after brief delay
+          setTimeout(() => {
+            this.disabled = false;
+            this.textContent = "Send via Gmail";
+          }, 1000);
+        });
+
+      //
+      // Default Email Client Form Handler
+      // =================================
+      // Handles form submission via system default email client
+      //
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent default form submission
+
+          // Trigger native HTML5 validation before proceeding
+          if (!this.checkValidity()) {
+            this.reportValidity();
+            return;
+          }
+
+          // Get form field values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+          const submitBtn = document.getElementById("submit-btn");
+
+          // Show loading state to user
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Opening Email Client...";
+
+          // Create mailto link with form data
+          const mailtoSubject = encodeURIComponent(subject);
+          const mailtoBody = encodeURIComponent(
+            `Hi Trevor,\n\n` +
+              `${message}\n\n` +
+              `Feel free to reply to this email or contact me at ${email}.\n\n` +
+              `Best regards,\n${name}`,
+          );
+
+          const mailtoLink = `mailto:trevor@trevordewall.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+          // Open email client with slight delay for better UX
+          setTimeout(() => {
+            window.location.href = mailtoLink;
+
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send via Default Email";
+          }, 500);
+        });
+
+      //
+      // Email Copy Functionality
+      // ========================
+      // Copies email address to clipboard with fallback for older browsers
+      //
+      document
+        .getElementById("copy-email-btn")
+        .addEventListener("click", function () {
+          const email = "trevor@trevordewall.com";
+
+          // Use modern Clipboard API if available (secure contexts only)
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(email).then(() => {
+              // Show success feedback
+              this.textContent = "Copied!";
+              setTimeout(() => {
+                this.textContent = "Copy Email Address";
+              }, 2000);
+            });
+          } else {
+            // Fallback method for older browsers or non-secure contexts
+            const textArea = document.createElement("textarea");
+            textArea.value = email;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+
+            // Show success feedback
+            this.textContent = "Copied!";
+            setTimeout(() => {
+              this.textContent = "Copy Email Address";
+            }, 2000);
+          }
+        });
+
+      //
+      // Form Validation Enhancement
+      // ===========================
+      // Provides visual feedback for form validation
+      //
+      const inputs = document.querySelectorAll(
+        ".form-group input, .form-group textarea",
+      );
+
+      // Add blur event listeners for immediate validation feedback
+      inputs.forEach((input) => {
+        input.addEventListener("blur", function () {
+          // Check if required field is empty
+          if (this.hasAttribute("required") && !this.value.trim()) {
+            this.style.borderColor = "#dc3545"; // Red border for errors
+          } else {
+            this.style.borderColor = "#ddd"; // Default border for valid fields
+          }
+        });
+      });
+
+      //
+      // Email Format Validation
+      // =======================
+      // Real-time email validation with visual feedback
+      //
+      const emailInput = document.getElementById("email");
+      emailInput.addEventListener("input", function () {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Validate email format if field has content
+        if (this.value && !emailRegex.test(this.value)) {
+          this.style.borderColor = "#dc3545"; // Red border for invalid email
+        } else {
+          this.style.borderColor = "#ddd"; // Default border for valid email
+        }
+      });
+    </script>
+  </body>
+</html>

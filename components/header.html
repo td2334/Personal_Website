@@ -1,0 +1,114 @@
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <!-- 
+    Logo/Branding Section
+    =====================
+    Contains the site logo that links back to the homepage
+    Logo path is adjusted dynamically by addComponents.js based on page location
+    -->
+    <div class="logo">
+      <a
+        href="/"
+        id="logo-link"
+        aria-label="Trevor DeWall - Return to homepage"
+      >
+        <img
+          src="/images/dewallsitelogo2.webp"
+          alt="Trevor DeWall Professional Logo"
+          class="logo-img"
+        />
+      </a>
+    </div>
+
+    <!-- 
+    Main Navigation Section
+    =======================
+    Contains both desktop navigation and mobile menu toggle
+    Desktop menu is visible on larger screens
+    Mobile menu toggle appears on smaller screens
+    -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <!-- 
+      Mobile Menu Toggle Button
+      =========================
+      Hamburger menu button for mobile devices
+      JavaScript in addComponents.js handles the toggle functionality
+      Uses three span elements to create the hamburger icon
+      -->
+      <button
+        class="mobile-menu-toggle"
+        id="menu-toggle"
+        aria-label="Toggle mobile navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <!-- 
+      Navigation Menu
+      ===============
+      Main navigation links to all sections of the website
+      Hidden on mobile by default, shown when menu toggle is activated
+      Links are organized by importance and user flow
+      -->
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li role="none">
+          <a
+            href="/"
+            role="menuitem"
+            aria-label="Navigate to homepage"
+          >
+            HOME
+          </a>
+        </li>
+        <li role="none">
+          <a
+            href="/about.html"
+            role="menuitem"
+            aria-label="Navigate to about page"
+          >
+            ABOUT
+          </a>
+        </li>
+
+        <!--
+        <li role="none">
+          <a
+            href="pages/projects.html"
+            role="menuitem"
+            aria-label="Navigate to projects portfolio"
+          >
+            PROJECTS
+          </a>
+        </li>
+        -->
+       
+       
+       
+       
+        <li role="none">
+          <a
+            href="/resume.html"
+            role="menuitem"
+            aria-label="Navigate to resume page"
+          >
+            RESUME
+          </a>
+        </li>
+        <li role="none">
+          <a
+            href="/contact.html"
+            role="menuitem"
+            aria-label="Navigate to contact page"
+          >
+            CONTACT
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

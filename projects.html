@@ -1,0 +1,246 @@
+<!--
+================================================================================
+PROJECTS PAGE - TREVOR J. DEWALL PERSONAL WEBSITE
+================================================================================
+File: projects.html
+Purpose: Portfolio showcase page displaying Trevor's development projects and work
+Author: Trevor J. DeWall
+Last Updated: June 2025
+
+Description:
+This page showcases Trevor's portfolio of projects, demonstrating his
+skills in cyber security, software development, and systems administration.
+Currently serves as a placeholder that can be expanded with actual project content.
+
+Intended Features (to be implemented):
+- Project showcase grid with screenshots
+- Detailed project descriptions
+- Technology stack information for each project
+- Links to live demos and source code
+- Project categories/filtering
+- Responsive design for all devices
+
+Page Structure (when implemented):
+1. Navigation Header (dynamic)
+2. Hero Section - Portfolio introduction
+3. Project Categories/Filters
+4. Project Grid - Individual project cards
+5. Project Details - Expandable or modal views
+6. Footer (dynamic)
+
+Dependencies:
+- CSS: ../css/singlePageTemplate.css
+- JavaScript: ../components/addComponents.js
+- Components: header.html, footer.html
+- Images: favicon.ico, project screenshots (when added)
+
+TODO:
+- Add actual project content
+- Implement project showcase grid
+- Add project filtering functionality
+- Include screenshots and demos
+- Add project detail modals or pages
+================================================================================
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding and viewport for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO and metadata -->
+    <meta
+      name="description"
+      content="Explore Trevor J. DeWall's portfolio of projects in cyber security, software development, and systems administration. View demos and source code."
+    />
+    <meta
+      name="keywords"
+      content="Trevor DeWall Projects, Cyber Security Projects, Software Development Portfolio, Programming Projects, Code Samples"
+    />
+    <meta name="author" content="Trevor J. DeWall" />
+
+    <!-- Page title for browser tab and SEO -->
+    <title>Projects - Trevor J. DeWall</title>
+
+    <!-- Stylesheet and favicon -->
+    <link rel="stylesheet" href="../css/singlePageTemplate.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- 
+    ============================================================================
+    PROJECTS PAGE STRUCTURE (PLACEHOLDER)
+    ============================================================================
+    This page is currently a placeholder for Trevor's project portfolio.
+    When implemented, it will showcase his development work and achievements.
+    
+    Planned Page Sections:
+    1. Navigation Header (dynamic)
+    2. Hero Section - Portfolio introduction
+    3. Project Categories - Filter options
+    4. Project Showcase Grid - Individual project cards
+    5. Project Details - Detailed views or modals
+    6. Footer (dynamic)
+    
+    Each project card should include:
+    - Project thumbnail/screenshot
+    - Project title and brief description
+    - Technology stack used
+    - Links to live demo and source code
+    - Project category/tags
+    ============================================================================
+    -->
+
+    <!-- Dynamic header insertion point -->
+    <div id="header-placeholder">
+      <!-- Header component loaded by addComponents.js -->
+    </div>
+
+    <!-- Main content container with semantic HTML -->
+    <main class="projects-container">
+      <!-- Theme Toggle - Fixed position for easy access -->
+      <div class="theme-toggle">
+        <span class="theme-icon sun">☀️</span>
+        <label class="theme-switch">
+          <input
+            type="checkbox"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          />
+          <span class="theme-slider"></span>
+        </label>
+        <span class="theme-icon moon">🌙</span>
+      </div>
+
+      <!-- 
+      Hero Section
+      ============
+      Introduction to the projects portfolio with clear description
+      Follows the same pattern as about-hero and contact-hero
+      -->
+      <section class="projects-hero">
+        <h1>Projects & Labs Library</h1>
+        <p>
+          Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </section>
+
+      <!-- 
+      Projects Content - Two Column Layout
+      ====================================
+      Following the same structure as contact-content with grid layout
+      Split layout showing personal projects on the left and college labs on the right
+      -->
+      <div class="projects-content">
+        <!-- 
+        Personal Projects Section
+        =========================
+        Left column showcasing personal development projects
+        Following the same pattern as about-section styling
+        -->
+        <section class="projects-section">
+          <h2>Personal Projects</h2>
+
+          <!-- Project Item -->
+          <div class="project-item">
+            <h3 class="project-title">EXAMPLE Monitoring Dashboard</h3>
+            <div class="project-meta">
+              <span class="project-type">Web App</span>
+              <span class="project-date">YearGoesHere</span>
+            </div>
+            <p class="project-description">
+              Lorum ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Socket.io</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank"
+                >Put Links Here</a
+              >
+              <a href="#" class="project-link" target="_blank"
+                >(Example) Source Code</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        College Labs Section
+        ====================
+        Right column showcasing academic lab work and coursework projects
+        Following the same pattern as about-section styling
+        -->
+        <section class="projects-section">
+          <h2>College Labs & Coursework</h2>
+
+          <!-- Lab Item 1 -->
+          <div class="project-item">
+            <h3 class="project-title">EXAMPLE Network Architecture Lab</h3>
+            <div class="project-meta">
+              <span class="project-type">Infrastructure</span>
+              <span class="project-date">1945</span>
+            </div>
+            <p class="project-description">
+              Lorum ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Cisco IOS</span>
+              <span class="tech-tag">OSPF</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank">Lab Report</a>
+              <a href="#" class="project-link" target="_blank"
+                >Network Diagram</a
+              >
+            </div>
+          </div>
+
+          <!-- Lab Item 2 -->
+          <div class="project-item">
+            <h3 class="project-title">Penetration Testing Lab</h3>
+            <div class="project-meta">
+              <span class="project-type">Security Assessment</span>
+              <span class="project-date">1451 B.C.</span>
+            </div>
+            <p class="project-description">
+              Lorum ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Kali Linux</span>
+              <span class="tech-tag">Metasploit</span>
+              <span class="tech-tag">Nessus</span>
+              <span class="tech-tag">Wireshark</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" target="_blank"
+                >Assessment Report</a
+              >
+              <a href="#" class="project-link" target="_blank">Methodology</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Dynamic footer insertion point -->
+    <div id="footer-placeholder">
+      <!-- Footer component loaded by addComponents.js -->
+    </div>
+
+    <!-- 
+    JavaScript Dependencies
+    =======================
+    Load component handler for header/footer insertion and functionality
+    -->
+    <script src="../components/addComponents.js"></script>
+  </body>
+</html>
